@@ -31,8 +31,6 @@ module.exports = function(app) {
     })
   });
 
-  // For now, we won't touch the rest of this code, which was created by
-  // Ember CLI
   usersRouter.get('/', function(req, res) {
     userDB.find(req.query).exec(function(error, users) {
       res.send({
