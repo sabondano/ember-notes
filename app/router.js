@@ -12,7 +12,10 @@ Router.map(function() {
              { path: 'notebooks/:user_id'},
              function() {
                this.route('notes', { path: "notes/:notebook_id" },
-                          function() {});
+                          function() {
+                            this.route('note', { path: ":note_id" },
+                                       function() {});
+                          });
              });
 });
 
