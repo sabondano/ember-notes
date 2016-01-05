@@ -4,10 +4,6 @@ import ValidationFunctions from 'ember-note/mixins/validation-functions';
 export default Ember.Route.extend(ValidationFunctions, {
   actions: {
     addNew: function() {
-      let user = this.store.createRecord('user', {
-        name: this.controller.get('name')
-      });
-
       if (this.isValidEmail(name)) {
         var user = this.store.createRecord('user', {
           name : name
